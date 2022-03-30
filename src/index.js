@@ -91,10 +91,8 @@ const runScript = () => {
     config.registerModule(new ChampionsModule())
     config.registerModule(new ResourceBarsModule())
     config.registerModule(new HomeScreenModule())
-    if (!Helpers.isCxH()) {
-        config.registerModule(new PopNavSortModule())
-        config.registerModule(new PopClassFilterModule())
-    }
+    config.registerModule(new PopNavSortModule())
+    config.registerModule(new PopClassFilterModule())
     config.registerModule(new SeasonStatsModule())
     config.registerModule(new PachinkoNamesModule())
     config.registerModule(new ContestRewardsModule())
