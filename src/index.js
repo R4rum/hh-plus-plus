@@ -44,6 +44,7 @@ import {
     MoneyAnimationStyleTweak,
     MoveSkipButtonStyleTweak,
     PachinkoNamesModule,
+    PopClassFilterModule,
     PopNavSortModule,
     PoseAspectRatioStyleTweak,
     ReduceHomeScreenBlurStyleTweak,
@@ -92,6 +93,7 @@ const runScript = () => {
     config.registerModule(new HomeScreenModule())
     if (!Helpers.isCxH()) {
         config.registerModule(new PopNavSortModule())
+        config.registerModule(new PopClassFilterModule())
     }
     config.registerModule(new SeasonStatsModule())
     config.registerModule(new PachinkoNamesModule())

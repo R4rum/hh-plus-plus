@@ -4,29 +4,31 @@
     .left-side-container {
         .position-quest {
             position: absolute;
-            left: 412px;
-            top: 32px;
+            left: 150px;
+            top: -10px;
             flex-direction: column-reverse;
             width: 8.125rem;
             align-items: center;
+            visibility: hidden;
 
             .continue-quest-container {
                 padding-left: 0;
                 padding-bottom: 8px;
+                visibility: visible;
             }
         }
 
         [rel="leaderboard"] {
             position: absolute;
             width: 8.125rem;
-            top: 86px;
-            left: 253px;
+            top: 55px;
+            left: 176px;
         }
         [rel="activities"] {
             position: absolute;
             width: 8.125rem;
             top: 366px;
-            left: 602px;
+            left: 632px;
         }
         [rel="shop"] {
             position: absolute;
@@ -37,19 +39,19 @@
         [rel="harem"] {
             position: absolute;
             width: 8.125rem;
-            bottom: 81px;
+            bottom: 141px;
             right: 31px;
         }
         [rel="pachinko"] {
             position: absolute;
             width: 8.125rem;
-            top: 67px;
+            top: 128px;
             left: 58px;
         }
 
         .position-sex-god-path {
             position: absolute;
-            left: 612px;
+            left: 632px;
             top: 56px;
             flex-direction: column-reverse;
             width: 8.125rem;
@@ -80,10 +82,10 @@
         .waifu-and-right-side-container {
             .waifu-container {
                 img {
-                    height: 600px;
-                    width: 240px;
+                    height: 750px;
+                    width: 300px;
                     margin-left: 169px;
-                    margin-top: 125px;
+                    margin-top: -25px;
                 }
 
                 canvas.animated-girl-display {
@@ -109,7 +111,7 @@
                     .collect-button {
                         position: absolute;
                         right: 0px;
-                        bottom: 0px;
+                        bottom: 60px;
                         width: 11rem;
                         height: 4rem;
                         #collect_all_container #collect_all {

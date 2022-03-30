@@ -10,7 +10,7 @@ const config = {
     mode: 'production',
     entry: './src/index.js',
     output: {
-        filename: 'hh-plus-plus.user.js',
+        filename: 'rarum-hh-plus-plus.user.js',
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
@@ -65,7 +65,7 @@ const config = {
 module.exports = (env, argv) => {
 
     if (argv.mode === 'development') {
-        config.output.filename = 'hh-plus-plus.dev.user.js'
+        config.output.filename = 'rarum-hh-plus-plus.dev.user.js'
     }
 
     return config

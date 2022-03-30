@@ -47,6 +47,7 @@ export const config = {
     homeScreen: 'Home Screen Shortcuts & Timers',
     resourceBars: 'Resource bars / Booster tracking',
     popSort: 'PoP sorting and quick navigation',
+    popClassFilter: 'PoP class filter',
     seasonStats: 'Season stats',
     pachinkoNames: 'Show names in Pachinko',
     contestSummary: 'Saved Contests rewards summary',

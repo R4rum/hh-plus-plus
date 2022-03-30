@@ -180,10 +180,10 @@ class MarketEquipsFilterModule extends CoreModule {
             const favoritesMatches = this.currentFilter.favorites === FILTER_DEFAULT || JSON.parse(this.currentFilter.favorites) === isFavorite
 
             if ([subtypeMatches, rarityMatches, statsMatches, favoritesMatches].every(a=>a)) {
-                $(el).removeClass('filtered_out')
+                //$(el).removeClass('filtered_out')
                 visibleCount++
             } else {
-                $(el).addClass('filtered_out')
+                $(el).remove()
             }
         })
 
