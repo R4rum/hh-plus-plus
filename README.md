@@ -3,7 +3,9 @@
 # Installation instructions:
 
 a) Install ViolentMonkey, TamperMonkey or Greasemonkey (Firefox addon)
-b) Click the script URL: https://raw.githubusercontent.com/R4rum/hh-plus-plus/main/dist/hh-plus-plus.user.js
+
+b) Click the script URL: https://raw.githubusercontent.com/R4rum/hh-plus-plus/main/dist/rarum-hh-plus-plus.dev.user.js
+
 c) Your user script manager of choice should automatically prompt you to install/update the script. If it doesn't, well, figure it out.
 
 # What this changes

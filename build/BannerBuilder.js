@@ -13,7 +13,7 @@ class BannerBuilder {
 
     static buildBanner() {
         const meta = BannerBuilder.buildMeta()
-        fs.writeFileSync(path.resolve(__dirname, '../dist/hh-plus-plus.meta.js'), meta)
+        fs.writeFileSync(path.resolve(__dirname, '../dist/rarum-hh-plus-plus.meta.js'), meta)
         return meta
     }
 }
