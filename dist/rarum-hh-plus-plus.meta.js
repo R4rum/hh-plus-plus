@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Hentai Heroes++ Rarum's version
 // @description     Adding things here and there in the Hentai Heroes game. Also supports HHCore-based games such as GH and CxH.
-// @version         1.11.9.1
+// @version         1.12.1
 // @match           https://*.hentaiheroes.com/*
 // @match           https://nutaku.haremheroes.com/*
 // @match           https://*.gayharem.com/*
@@ -32,6 +32,7 @@
  * - Orange
  * - zoopokemon
  * - Ia1nn
+ * - rena-jp
  * - and many more over the years!
  *
  * Translations

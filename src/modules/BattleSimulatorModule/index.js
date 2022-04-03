@@ -22,11 +22,6 @@ class BattleSimulatorModule extends CoreModule {
                     key: 'logging',
                     label: I18n.getModuleLabel('config', `${MODULE_KEY}_logging`),
                     default: false
-                },
-                {
-                    key: 'highPrecisionMode',
-                    label: I18n.getModuleLabel('config', `${MODULE_KEY}_highPrecisionMode`),
-                    default: false
                 }
             ]
         })
@@ -34,24 +29,22 @@ class BattleSimulatorModule extends CoreModule {
 
         this.simManagers = []
         this.logging = false
-        this.highPrecisionMode = false
     }
 
     shouldRun () {
         return ['pre-battle', 'tower-of-fame', 'season-arena'].some(page=>Helpers.isCurrentPage(page))
     }
 
-    run ({logging, highPrecisionMode}) {
+    run ({logging}) {
         if (this.hasRun || !this.shouldRun()) {return}
         this.logging = logging
-        this.highPrecisionMode = highPrecisionMode
 
         styles.use()
 
         Helpers.defer(() => {
             this.injectCSSVars()
             if (Helpers.isCurrentPage('tower-of-fame')) {
-                this.simManagers = [new League({highPrecisionMode})]
+                this.simManagers = [new League()]
             } else if (Helpers.isCurrentPage('season-arena')) {
                 this.preSim = true
                 this.simManagers = [
@@ -79,16 +72,16 @@ class BattleSimulatorModule extends CoreModule {
         Sheet.registerVar('mojo-icon-s', `url(${Helpers.getCDNHost()}/pictures/design/ic_mojo_white.svg)`)
     }
 
-    async runManagedSim () {
-        await Promise.all(this.simManagers.map(async simManager => {
+    runManagedSim () {
+        this.simManagers.forEach(simManager => {
             const {player, opponent} = simManager.extract()
-            const {logging, highPrecisionMode, preSim} = this
+            const {logging, preSim} = this
 
-            const simulator = new Simulator({player, opponent, highPrecisionMode, logging, preSim})
-            const result = await simulator.run()
+            const simulator = new Simulator({player, opponent, logging, preSim})
+            const result = simulator.run()
 
             simManager.display(result)
-        }))
+        })
     }
 }
 
