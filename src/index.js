@@ -48,6 +48,7 @@ import {
     PopNavSortModule,
     PoseAspectRatioStyleTweak,
     ReduceHomeScreenBlurStyleTweak,
+    ReloadFrameModule,
     ResourceBarsModule,
     RewardShardsModule,
     SeasonStatsModule,
@@ -89,6 +90,7 @@ const runScript = () => {
     config.registerModule(new BattleSimulatorModule())
     config.registerModule(new TeamsFilterModule())
     config.registerModule(new ChampionsModule())
+    config.registerModule(new ReloadFrameModule())
     config.registerModule(new ResourceBarsModule())
     config.registerModule(new HomeScreenModule())
     config.registerModule(new PopNavSortModule())

@@ -10,6 +10,8 @@ c) Your user script manager of choice should automatically prompt you to install
 
 # What this changes
 * The market equips filter module has greatly improved speed, at the cost of usability
+* A refresh button for contest leaderboards
 * The legacy home screen layout has been modified to make room for a larger girl image
 * A different temporary PoP order
 * PoPs have only girls of matching class displayed by default
+* LeagueInfoModule is now included in the API

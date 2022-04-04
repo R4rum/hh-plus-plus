@@ -49,6 +49,7 @@ export const config = {
     resourceBars: 'Resource bars / Booster tracking',
     popSort: 'PoP sorting and quick navigation',
     popClassFilter: 'PoP class filter',
+    reloadFrameButton: 'Reload frame button',
     seasonStats: 'Season stats',
     pachinkoNames: 'Show names in Pachinko',
     contestSummary: 'Saved Contests rewards summary',

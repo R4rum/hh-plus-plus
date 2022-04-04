@@ -572,3 +572,4 @@ class LeagueInfoModule extends CoreModule {
 }
 
 export default LeagueInfoModule
+window.HHPlusPlus.LeagueInfoModule = LeagueInfoModule
