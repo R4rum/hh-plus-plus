@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name            Hentai Heroes++ Rarum's version
 // @description     Adding things here and there in the Hentai Heroes game. Also supports HHCore-based games such as GH and CxH.
-// @version         1.13.3.2
+// @version         1.14.0.1
 // @match           https://*.hentaiheroes.com/*
 // @match           https://nutaku.haremheroes.com/*
 // @match           https://*.gayharem.com/*
 // @match           https://*.comixharem.com/*
+// @match           https://*.hornyheroes.com/*
 // @run-at          document-body
 // @namespace       https://github.com/R4rum/hh-plus-plus
 // @updateURL       https://raw.githubusercontent.com/R4rum/hh-plus-plus/main/dist/rarum-hh-plus-plus.meta.js
