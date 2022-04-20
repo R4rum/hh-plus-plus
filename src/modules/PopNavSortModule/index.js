@@ -11,9 +11,9 @@ const IDEAL_ORDER = [
     '4', '5', '6',      // ymen     / darkness
     '19', '20', '21',   // ticket   / stone
     '7', '8', '9',      // koban    / light
-    '16', '17', '18',   // booster  / fire
     '10', '11', '12',   // gem      / nature & psychic
     '22', '23', '24',   // gift     / sun
+    '16', '17', '18',   // booster  / fire
 ]
 
 const sortPopIds = (popIds) => IDEAL_ORDER.filter(id => popIds.includes(id))
