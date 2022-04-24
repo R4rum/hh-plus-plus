@@ -21,6 +21,7 @@ import {
     ContestRewardsModule,
     DisableDragDropModule,
     FightAVillainModule,
+    FixFontImportModule,
     GemStockModule,
     GirlSalaryTimersStyleTweak,
     HaremInfoModule,
@@ -112,7 +113,8 @@ const runScript = () => {
     if (!Helpers.isPSH() && !Helpers.isHoH()) {config.registerModule(new BlessingSpreadsheetLinkModule())}
     config.registerModule(new HomeScreenIconsModule())
     config.registerModule(new HomeScreenOrderModule())
-    if (!Helpers.isPSH()) {config.registerModule(new HomeScreenOldishModule())}
+    config.registerModule(new HomeScreenOldishModule())
+    if (Helpers.isPSH()) {config.registerModule(new FixFontImportModule())}
 
     // style tweaks
     config.registerGroup({
@@ -125,7 +127,7 @@ const runScript = () => {
     config.registerModule(new MobileBattleStyleTweak())
     config.registerModule(new MobileLeagueDarkBackgroundStyleTweak())
     config.registerModule(new HideRotateDeviceStyleTweak())
-    if (Helpers.isCxH()) {
+    if (Helpers.isCxH() || Helpers.isPSH()) {
         config.registerModule(new GirlSalaryTimersStyleTweak())
     }
     config.registerModule(new MoveSkipButtonStyleTweak())

@@ -1,3 +1,7 @@
+1.14.5: Making girl salary timer style tweak apply to PSH as well, removing debug from credits page
+1.14.4: Adding script info and credits panel to config pane
+1.14.3: Putting legacy layout back in for PSH such as it is
+1.14.2: Adding a temporary mini-module to fix the Montserrat font import and text stroke on breadcrumbs
 1.14.1: Adding appropriate data and restrictions for HoH and PSH.
 1.14.0: Adding a tweak to add dark mode to the new messenger feature, enabling the script to run on HoH (will add PH as well when it leaves closed beta)
 1.13.3: Fixing visual bug in population of market girl class filter (#70). Disabling pointer events on home screen icons to prevent blocking of the tooltips
