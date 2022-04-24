@@ -9,9 +9,9 @@ const MODULE_KEY = 'popSort'
 const IDEAL_ORDER = [
     '13', '14', '15',   // orb      / water
     '4', '5', '6',      // ymen     / darkness
-    '19', '20', '21',   // ticket   / stone
-    '7', '8', '9',      // koban    / light
     '10', '11', '12',   // just gems
+    '7', '8', '9',      // koban    / light
+    '19', '20', '21',   // ticket   / stone
     '22', '23', '24',   // gift     / sun
     '16', '17', '18',   // booster  / fire
 ]
