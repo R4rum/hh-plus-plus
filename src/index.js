@@ -27,6 +27,7 @@ import {
     HaremInfoModule,
     HideClaimedRewardsModule,
     HideRotateDeviceStyleTweak,
+    HomeScreenHideFluffModule,
     HomeScreenIconsModule,
     HomeScreenModule,
     HomeScreenOldishModule,
@@ -97,6 +98,7 @@ const runScript = () => {
     config.registerModule(new ReloadFrameModule())
     config.registerModule(new ResourceBarsModule())
     config.registerModule(new HomeScreenModule())
+    config.registerModule(new HomeScreenHideFluffModule())
     if (!Helpers.isPSH() && !Helpers.isHoH()) {config.registerModule(new PopNavSortModule())}
     config.registerModule(new PopClassFilterModule())
     config.registerModule(new SeasonStatsModule())
