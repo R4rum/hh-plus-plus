@@ -15,3 +15,4 @@ c) Your user script manager of choice should automatically prompt you to install
 * A different temporary PoP order
 * PoPs have only girls of matching class displayed by default
 * LeagueInfoModule is now included in the API
+* Two hardly used buttons can be removed from the home screen
