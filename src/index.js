@@ -94,7 +94,7 @@ const runScript = () => {
     config.registerModule(new LeagueInfoModule())
     config.registerModule(new BattleSimulatorModule())
     config.registerModule(new TeamsFilterModule())
-    if (!Helpers.isPSH() && !Helpers.isHoH()) {config.registerModule(new ChampionsModule())}
+    if (!Helpers.isHoH()) {config.registerModule(new ChampionsModule())}
     config.registerModule(new ReloadFrameModule())
     config.registerModule(new ResourceBarsModule())
     config.registerModule(new HomeScreenModule())
