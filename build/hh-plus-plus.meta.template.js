@@ -7,6 +7,7 @@
 // @match           https://*.gayharem.com/*
 // @match           https://*.comixharem.com/*
 // @match           https://*.hornyheroes.com/*
+// @match           https://*.pornstarharem.com/*
 // @run-at          document-body
 // @namespace       https://github.com/R4rum/hh-plus-plus
 // @updateURL       https://raw.githubusercontent.com/R4rum/hh-plus-plus/main/dist/rarum-hh-plus-plus.meta.js
