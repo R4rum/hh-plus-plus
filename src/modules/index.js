@@ -31,7 +31,6 @@ export {default as HomeScreenIconsModule} from './HomeScreenIconsModule'
 export {default as HomeScreenHideFluffModule} from './HomeScreenHideFluff'
 export {default as HomeScreenOrderModule} from './HomeScreenOrderModule'
 export {default as HomeScreenOldishModule} from './HomeScreenOldishModule'
-export {default as FixFontImportModule} from './FixFontImportModule'
 export {default as OverridePachinkoConfirmModule} from './OverridePachinkoConfirmModule'
 
 export {default as MissionsBackgroundStyleTweak} from './MissionsBackgroundStyleTweak'
