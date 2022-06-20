@@ -29,6 +29,7 @@ export const CxH = [
     'ontheprowl',
     'bushexplorations',
     'thespy',
+    'hornyknight',
 ]
 
 export const PSH = [
@@ -36,4 +37,5 @@ export const PSH = [
     'begincity',
     'fukwell',
     'eurodick',
+    'homecumming',
 ]

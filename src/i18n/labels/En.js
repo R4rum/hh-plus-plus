@@ -122,8 +122,10 @@ export const villain = {
     nymph: 'The Nymph',
     athicus: 'Athicus Ho’ole',
     jockstrap: 'The Mimic',
+    cockatrice: 'Cockatrice',
     asaakira: 'Headmistress Asa Akira',
     sammyjayne: 'Sammy Jayne',
+    ivywinters: 'Ivy Winters',
     fallback: 'World {{world}} villain',
     event: 'Event',
 }
@@ -329,9 +331,11 @@ export const villainBreadcrumbs = {
     ontheprowl: 'On the Prowl',
     bushexplorations: 'Bush Explorations',
     thespy: 'The Spy Who Came Inside Me',
+    hornyknight: 'The Horny Knight',
 
     fukwell: 'Fukwell University',
     eurodick: 'Eurodick',
+    homecumming: 'Homecumming',
 }
 
 export const blessingSpreadsheetLink = {

@@ -98,8 +98,8 @@ class LeagueInfoModule extends CoreModule {
             this.injectCSSVars()
             this.aggregateData()
             this.displaySummary({board, promo})
-            this.manageHideFoughtOpponents()
             this.manageTableAnnotations()
+            this.manageHideFoughtOpponents()
         })
 
         this.hasRun = true
@@ -258,38 +258,35 @@ class LeagueInfoModule extends CoreModule {
     }
 
     manageHideFoughtOpponents () {
+        let rowCache = []
+
         function removeFoughtOpponents() {
             let board = document.getElementsByClassName('leadTable')[0]
             if(!board)
                 return
-            let opponents = board.getElementsByTagName('tr')
-            for (let i=0; i<opponents.length; i++) {
+            rowCache = []
+            const $opponents = $(board).find('tr')
+            $opponents.each((i, el) => {
                 try {
-                    const playerId = $(opponents[i]).attr('sorting_id')
+                    const $opponent = $(el)
+                    rowCache.push($opponent)
+                    const playerId = $opponent.attr('sorting_id')
                     if(leagues_list.find(({id_player}) => id_player === playerId).nb_challenges_played === '3'){
-                        opponents[i].style.display='none'
+                        $opponent.detach()
                     }
                 } catch(e) {
                     // Ignore
                 }
-            }
+            })
         }
 
         function displayFoughtOpponents() {
             const board = document.getElementsByClassName('leadTable')[0]
-            if(!board)
+            if(!board || !rowCache.length)
                 return
-            const opponents = board.getElementsByTagName('tr')
-            for (let i=0; i<opponents.length; i++) {
-                try {
-                    const playerId = $(opponents[i]).attr('sorting_id')
-                    if(leagues_list.find(({id_player}) => id_player === playerId).nb_challenges_played === '3'){
-                        opponents[i].style.display=''
-                    }
-                } catch(e) {
-                    // Ignore
-                }
-            }
+            rowCache.forEach($opponent => {
+                $(board).append($opponent)
+            })
         }
 
         let hidden = Helpers.lsGet(lsKeys.FOUGHT_OPPONENTS_HIDDEN)
@@ -369,8 +366,8 @@ class LeagueInfoModule extends CoreModule {
             const data = Helpers.lsGet(lsKeys.LEAGUE_RESULTS) || {}
             const pointHistory = Helpers.lsGet(lsKeys.LEAGUE_POINT_HISTORY) || {}
             let pointHistoryChanged = false
-            for(let i=0; i<this.aggregates.playersTotal; i++) {
-                let playerData = $('.leagues_table .lead_table_view tbody.leadTable tr:nth-child(' + (i+1) + ')')
+            $('.leagues_table .lead_table_view tbody.leadTable tr').each((i, el) => {
+                let playerData = $(el)
                 let playerId = playerData.attr('sorting_id')
                 let player = data[playerId]
                 if (player) {
@@ -414,7 +411,7 @@ class LeagueInfoModule extends CoreModule {
                         playerData[0].children[3].innerText=pointsText
                     }
                 }
-            }
+            })
             if (pointHistoryChanged) {
                 Helpers.lsSet(lsKeys.LEAGUE_POINT_HISTORY, pointHistory)
             }
@@ -422,8 +419,7 @@ class LeagueInfoModule extends CoreModule {
 
         const calculateVictories = () => {
             let data = Helpers.lsGet(lsKeys.LEAGUE_RESULTS) || {}
-            let players = $('#leagues_middle .leadTable tr')
-            let nb_players = players.length
+            let nb_players = this.aggregates.playersTotal
             let nb_opponents = nb_players-1
             Helpers.lsSet(lsKeys.LEAGUE_PLAYERS, nb_opponents)
 
