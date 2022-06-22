@@ -1,0 +1,7 @@
+@import "../../common/constants.scss";
+
+#shops #inventory {
+    button[rel="sell"].hidden {
+        display: none;
+    }
+}

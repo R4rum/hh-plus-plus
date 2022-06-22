@@ -46,6 +46,7 @@ export const config = {
     marketEquipsFilter: 'Equips filter at the market',
     marketXPAff: 'XP and affection at the market',
     marketHideSellButton: 'Toggleable "Sell" button',
+    marketHideMythics: 'Hide mythic items in market',
     harem: 'Harem information',
     league: 'League information',
     league_board: 'Show the league tops',

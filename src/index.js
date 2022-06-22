@@ -38,6 +38,7 @@ import {
     MarketEquipsFilterModule,
     MarketGirlsFilterModule,
     MarketHideSellButtonModule,
+    MarketHideMythicsModule,
     MarketInfoModule,
     MarketXPAffModule,
     MessengerDarkModeStyleTweak,
@@ -90,6 +91,7 @@ const runScript = () => {
     config.registerModule(new MarketEquipsFilterModule())
     config.registerModule(new MarketXPAffModule())
     config.registerModule(new MarketHideSellButtonModule())
+    config.registerModule(new MarketHideMythicsModule())
     config.registerModule(new HaremInfoModule())
     config.registerModule(new LeagueInfoModule())
     config.registerModule(new BattleSimulatorModule())
