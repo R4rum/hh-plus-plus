@@ -34,6 +34,7 @@ export {default as HomeScreenOrderModule} from './HomeScreenOrderModule'
 export {default as HomeScreenOldishModule} from './HomeScreenOldishModule'
 export {default as OverridePachinkoConfirmModule} from './OverridePachinkoConfirmModule'
 export {default as FixClubPageScrollbarsModule} from './FixClubPageScrollbarsModule'
+export {default as FixPopupModule} from './FixPopupModule'
 
 export {default as MissionsBackgroundStyleTweak} from './MissionsBackgroundStyleTweak'
 export {default as MoneyAnimationStyleTweak} from './MoneyAnimationStyleTweak'
