@@ -69,9 +69,18 @@ class PopClassFilterModule extends CoreModule {
                 const searchParams = new URLSearchParams(location.search)
                 const currentPoPId = searchParams.get('index')
 
+                let power_reqs = {1: 0, 2: 0, 3: 0}
+                Object.keys(window.pop_data).forEach(function(c) {
+                    power_reqs[window.pop_data[c].class] += window.pop_data[c].max_team_power;
+                });
+                console.log("Total HC requirement: " + power_reqs[1]);
+                console.log("Total CH requirement: " + power_reqs[2]);
+                console.log("Total KH requirement: " + power_reqs[3]);
+
                 if (currentPoPId) {
                     this.injectCSSVars()
                     const $container = $('.pop_right_part .grid_view')
+
                     const $no_btn = createFilterBtn("no_filter")
                     const $hc_btn = createFilterBtn("hc_filter")
                     const $ch_btn = createFilterBtn("ch_filter")
