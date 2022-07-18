@@ -1,3 +1,126 @@
 #pop .pop_right_part>.grid_view div[girl].filtered_out {
     display: none;
 }
+
+#pop label.no_filter {
+    background: transparent;
+}
+
+#pop .pop_right_part label.no_filter {
+    width: 32px;
+    position: absolute;
+    top: 14px;
+}
+
+label.no_filter input {
+    height: 32px;
+    width: 32px;
+    display: block;
+    padding: 0px;
+}
+
+label.no_filter::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-image: var(--no-icon);
+    pointer-events: none;
+}
+
+#pop label.hc_filter {
+    background: transparent;
+}
+
+#pop .pop_right_part label.hc_filter {
+    width: 32px;
+    position: absolute;
+    top: 14px;
+    margin-left: 36px;
+}
+
+label.hc_filter input {
+    height: 32px;
+    width: 32px;
+    display: block;
+    padding: 0px;
+}
+
+label.hc_filter::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-image: var(--hc-icon);
+    pointer-events: none;
+}
+
+#pop label.ch_filter {
+    background: transparent;
+}
+
+#pop .pop_right_part label.ch_filter {
+    width: 32px;
+    position: absolute;
+    top: 14px;
+    margin-left: 72px;
+}
+
+label.ch_filter input {
+    height: 32px;
+    width: 32px;
+    display: block;
+    padding: 0px;
+}
+
+label.ch_filter::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-image: var(--ch-icon);
+    pointer-events: none;
+}
+
+#pop label.kh_filter {
+    background: transparent;
+}
+
+#pop .pop_right_part label.kh_filter {
+    width: 32px;
+    position: absolute;
+    top: 14px;
+    margin-left: 108px;
+}
+
+label.kh_filter input {
+    height: 32px;
+    width: 32px;
+    display: block;
+    padding: 0px;
+}
+
+label.kh_filter::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-image: var(--kh-icon);
+    pointer-events: none;
+}
