@@ -124,6 +124,7 @@ export const stConfig = {
     povUnclutter: 'PoV/PoG page clarity',
     dailyGoals: 'Daily Goals restyle',
     bbProgress: 'Better Boss Bang rewards progress bar',
+    compactLossScreen: 'Compact loss screen',
 }
 
 export const villain = {
