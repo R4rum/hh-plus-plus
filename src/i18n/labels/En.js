@@ -125,6 +125,7 @@ export const stConfig = {
     dailyGoals: 'Daily Goals restyle',
     bbProgress: 'Better Boss Bang rewards progress bar',
     compactLossScreen: 'Compact loss screen',
+    seasonalEventTweaks: 'Seasonal Event tweaks',
 }
 
 export const villain = {
