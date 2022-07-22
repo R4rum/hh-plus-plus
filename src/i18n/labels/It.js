@@ -129,6 +129,7 @@ export const stConfig = {
     dailyGoals: 'Restyle degli obiettivi quotidiani',
     bbProgress: 'Migliore barra di avanzamento della ricompensa nella Scopata Boss',
     compactLossScreen: 'Pantalla de pérdida compacta',
+    seasonalEventTweaks: 'Ottimizzazioni per l\'evento stagionale',
 }
 
 export const villain = {
@@ -257,6 +258,9 @@ export const teamsFilter = {
     searchedElement: 'Elemento',
     searchedRarity: 'Rarità',
     levelRange: 'Gamma di livelli',
+    levelCap: 'Limite di livello',
+    levelCap_capped: 'Raggiunto',
+    levelCap_uncapped: 'Non raggiunto',
     searchedAffCategory: 'Categoria di affetto',
     searchedAffLevel: 'Livello di affetto',
     grade0: '0 stella',

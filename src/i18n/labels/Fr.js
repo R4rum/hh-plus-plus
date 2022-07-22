@@ -114,6 +114,7 @@ export const stConfig = {
     dailyGoals: 'Redesign de la page des Objectifs Journaliers',
     bbProgress: 'Meilleure barre de progrès des récompenses de Boss Bang',
     compactLossScreen: 'Ecran de défaite compact',
+    seasonalEventTweaks: 'Modifications pour les Evènements Saisonniers',
 }
 
 export const villain = {
@@ -240,6 +241,9 @@ export const teamsFilter = {
     searchedElement: 'Élément',
     searchedRarity: 'Rareté',
     levelRange: 'Intervalle de niveaux',
+    levelCap: 'Niveau-plafond',
+    levelCap_capped: 'Atteint',
+    levelCap_uncapped: 'Non-atteint',
     searchedAffCategory: 'Catégorie d\'affection',
     searchedAffLevel: 'Niveau d\'affection',
     grade0: '0 étoile',

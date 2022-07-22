@@ -114,6 +114,7 @@ export const stConfig = {
     dailyGoals: 'Переделанная экран Daily Goals',
     bbProgress: 'Улучшенная полоса прогресса Boss Bang',
     compactLossScreen: 'Компактный экран поражения',
+    seasonalEventTweaks: 'Поправки для Сезонных Событий',
 }
 
 export const villain = {
@@ -252,6 +253,9 @@ export const teamsFilter = {
     searchedElement: 'Элемент',
     searchedRarity: 'Редкость',
     levelRange: 'Диапазон уровней',
+    levelCap: 'Предел уровня',
+    levelCap_capped: 'Достигнут',
+    levelCap_uncapped: 'Недостигнут',
     searchedAffCategory: 'Категория по влечению',
     searchedAffLevel: 'Уровень влечения',
     grade0: '0 звезд',
