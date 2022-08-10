@@ -31,7 +31,7 @@ class ReloadFrameModule extends CoreModule {
         Helpers.defer(() => {
             var button_holder = document.createElement("DIV");
             button_holder.innerHTML = '<input type="button" onclick="window.location.reload()" value="&#8635;" id="ReloadFrame" style="font-size:150%;" title="Refresh Contest Leaderboard" />';
-            $(".tabs").append(button_holder);
+            $(".base_block").append(button_holder);
         })
 
         this.hasRun = true
