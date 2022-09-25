@@ -56,7 +56,7 @@ export const config = {
     teamsFilter: 'Teams filter',
     champions: 'Champions information',
     champions_poseMatching: 'Add pose match indicators',
-    champions_fixPower: `Include Hero power in ${gameConfig.girl} power display`,
+    champions_fixPower: `Normalise ${gameConfig.girl} power for comparison`,
     homeScreen: 'Home Screen Shortcuts & Timers',
     homeScreenHideFluff: 'Hide Extraneous Home Screen Buttons',
     homeScreen_leaguePos: 'Show current league rank (makes extra network call)',
