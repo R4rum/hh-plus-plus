@@ -148,6 +148,7 @@ export const villain = {
     edward: 'Edward',
     edernas: 'Edernas',
     maro: 'Maro',
+    icaruswarlock: 'Icarus Warlock',
     bodyhack: 'BodyHack',
     greygolem: 'Grey Golem',
     nymph: 'The Nymph',
@@ -158,6 +159,7 @@ export const villain = {
     sammyjayne: 'Sammy Jayne',
     ivywinters: 'Ivy Winters',
     lilycade: 'Lily Cade',
+    amiamiley: 'Amia Miley',
     fallback: 'World {{world}} villain',
     event: 'Event',
 }
@@ -373,6 +375,7 @@ export const villainBreadcrumbs = {
     eurodick: 'Eurodick',
     homecumming: 'Homecumming',
     biggerintexas: 'Bigger in Texas',
+    westcock: 'West Cock'
 }
 
 export const blessingSpreadsheetLink = {

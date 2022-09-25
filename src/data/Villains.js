@@ -376,14 +376,40 @@ export default {
             world: 12,
             girls: {
                 1: ['24316446', '219651566', '501847856'],
-                2: [],
-                3: []
+                2: ['383709663'],
+                3: ['90685795']
             },
             gems: [{
                 element: 'stone',
                 amount: 20,
             }],
             items: ['XP4']
+        },
+        {
+            key: 'icaruswarlock',
+            world: 13,
+            girls: {
+                1: ['225365882', '478693885', '231765083'],
+                2: [],
+                3: []
+            },
+            gems: [{
+                element: 'sun',
+                amount: 20
+            }],
+            items: ['K4']
+        },
+        {
+            world: 14,
+            girls: {
+                1: ['86962133', '243793871', '284483399'],
+                2: [],
+                3: []
+            },
+            gems: [{
+                element: 'darkness',
+                amount: 25,
+            }]
         },
     ],
     CxH: [
@@ -566,14 +592,27 @@ export default {
             }]
         },
         {
+            key: 'amiamiley',
             world: 6,
+            girls: {
+                1: ['270611414', '464811282', '781232070'],
+                2: [],
+                3: []
+            },
+            gems: [{
+                element: 'darkness',
+                amount: 20,
+            }]
+        },
+        {
+            world: 7,
             girls: {
                 1: [],
                 2: [],
                 3: []
             },
             gems: [{
-                element: 'darkness',
+                element: 'light',
                 amount: 20,
             }]
         },
