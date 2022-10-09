@@ -20,7 +20,7 @@ class GemStockModule extends CoreModule {
     }
 
     shouldRun () {
-        return Helpers.isCurrentPage('shop') || (Helpers.isCurrentPage('harem') && !Helpers.isCurrentPage('hero'))
+        return (Helpers.isCurrentPage('harem') && !Helpers.isCurrentPage('hero'))
     }
 
     buildGemsTable () {
@@ -53,12 +53,7 @@ class GemStockModule extends CoreModule {
 
             const $gemStock = this.buildGemsStockElem()
 
-            let $container
-            if (Helpers.isCurrentPage('shop')) {
-                $container = $('#shops_right #girls_list')
-            } else {
-                $container = $('#harem_whole #harem_right')
-            }
+            const $container = $('#harem_whole #harem_right')
 
             $container.prepend($gemStock)
         })

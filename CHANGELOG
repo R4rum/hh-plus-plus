@@ -1,3 +1,16 @@
+1.24.3: Fixing (sort of) travel memories tracking. Script will continue to track the 5% despite the current 20% bug in-game.
+1.24.2: Removing deeplink to boosters from resource bars as it's pointing to the wrong boosters page. Better deeplink will be available later
+1.24.1: Adding missing translations for harem teams filter
+1.24.0: Adding module to filter by team in the harem
+1.23.22: Fixing usages when equipping a mythic booster
+1.23.21: Fixing bugs in mythic booster status updates and removing redundant modules
+1.23.20: Fixing booster equip detection in the BoosterStatusCollector
+1.23.19: Making compact PoP spacing explicit instead of auto
+1.23.18: Fixing spacing in compact PoPs on the test server
+1.23.17: Updating patrons list.
+1.23.16: Fixing mythic booster display in the resource bars on the test server
+1.23.15: Fixing bought stat tracking in the new market.
+1.23.14: Restoring most Market Info functionality in the new market.
 1.23.13: Updating champions power normalisation to use new hero_damage global that includes cordyceps effect
 1.23.12: Fixing bugs in booster display on test server
 1.23.11: Updating the setting name for normalisation of girl power in champions drafting

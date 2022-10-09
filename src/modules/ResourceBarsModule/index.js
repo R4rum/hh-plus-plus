@@ -345,7 +345,7 @@ class ResourceBarsModule extends CoreModule {
             }
         })
 
-        const $boosterStatusHTML = $('<a class="script-booster-status" href="/shop.html?type=booster"></a>')
+        const $boosterStatusHTML = $('<a class="script-booster-status" href="/shop.html"></a>')
 
         const buildNormalSlot = (data) => {
             const {empty, id_item, ico, identifier, rarity, endAt} = {...data, ...data.item}
@@ -360,13 +360,13 @@ class ResourceBarsModule extends CoreModule {
                 </div>`)
         }
         const buildMythicSlot = (data) => {
-            const {empty, id_item, identifier} = data
+            const {empty, id_item, ico, identifier} = {...data, ...data.item}
             if (empty) {
                 return '<div class="slot mythic empty"></div>'
             }
             return $(`
                 <div class="slot mythic" id_item="${id_item}" data-d="${JSON.stringify(data).replace(/"/g, '&quot;')}" additional-tooltip-info="${JSON.stringify({additionalText: '<span class="script-tooltip"></span>'}).replace(/"/g, '&quot;')}">
-                    <img src="${Helpers.getCDNHost()}/pictures/items/${identifier}.png"/>
+                    <img src="${ico || `${Helpers.getCDNHost()}/pictures/items/${identifier}.png`}"/>
                 </div>
             `)
         }
@@ -453,7 +453,8 @@ class ResourceBarsModule extends CoreModule {
             return $wrapper
         }
         const buildSlotAndAddTooltip = (buildSlot, data, replaceEmpty) => {
-            const {empty, rarity, id_m_i: idmiList, usages, usages_remaining, duration, endAt} = {...data, ...data.item}
+            const {empty, id_member_booster_equipped, usages_remaining, endAt, item} = data
+            const {rarity, default_usages, duration} = item || {}
             const $slot = buildSlot(data)
             let current = 0
             let max = 1
@@ -463,7 +464,7 @@ class ResourceBarsModule extends CoreModule {
             if (!empty) {
                 if (isMythic) {
                     current = usages_remaining
-                    max = usages
+                    max = default_usages
                 } else {
                     let normalisedDuration = duration === '1440' ? 86400 : duration
                     current = endAt - server_now_ts
@@ -482,7 +483,7 @@ class ResourceBarsModule extends CoreModule {
             }
 
             if (!empty && isMythic) {
-                const [id_m_i] = idmiList
+                const id_m_i = id_member_booster_equipped
                 this.activeBoosters[id_m_i] = $progressWrapper
             }
         }
@@ -496,10 +497,10 @@ class ResourceBarsModule extends CoreModule {
 
         $('header .currency').before($boosterStatusHTML)
 
-        $(document).on('boosters:equipped', (event, {id_item, id_m_i, isMythic}) => {
+        $(document).on('boosters:equipped', (event, {id_item, isMythic, new_id}) => {
             const boosterStatus = Helpers.lsGet(lsKeys.BOOSTER_STATUS) || {normal: [], mythic: []}
 
-            const newBoosterData = boosterStatus[isMythic ? 'mythic' : 'normal'].find(data=>data.id_item===id_item&&data.id_m_i.includes(id_m_i))
+            const newBoosterData = boosterStatus[isMythic ? 'mythic' : 'normal'].find(data=>data.id_item===id_item&&(new_id && data.id_member_booster_equipped===new_id))
 
             if (newBoosterData) {
                 const $slotToReplace = $boosterStatusHTML.find(`.slot.empty${isMythic ? '.mythic' : ':not(.mythic)'}`)
@@ -510,7 +511,7 @@ class ResourceBarsModule extends CoreModule {
                     console.log('somehow equipped a new equip but have no empty slot????')
                 }
             } else {
-                console.log('can\'t find data in LS for new booster with idmi', id_m_i, 'and itemid', id_item)
+                console.log('can\'t find data in LS for new booster with id', new_id, 'and itemid', id_item)
             }
         })
 
@@ -518,7 +519,7 @@ class ResourceBarsModule extends CoreModule {
             const boosterStatus = Helpers.lsGet(lsKeys.BOOSTER_STATUS) || {normal: [], mythic: []}
 
             const boostersByIdmi = {}
-            boosterStatus.mythic.forEach(data => boostersByIdmi[data.id_m_i[0]] = data)
+            boosterStatus.mythic.forEach(data => boostersByIdmi[data.id_member_booster_equipped] = data)
 
             Object.entries(this.activeBoosters).forEach(([id_m_i, $elem]) => {
                 const updatedData = boostersByIdmi[id_m_i]
@@ -528,8 +529,8 @@ class ResourceBarsModule extends CoreModule {
                     $elem.find('.slot').attr('class', 'slot mythic empty').empty().attr('data-d', '').attr('tooltip-id', '').attr('id_item', '')
                     $elem.find('.progress').css('transform', 'rotate(0deg)')
                 } else {
-                    const {usages, usages_remaining} = updatedData
-                    const percentage = Math.min(usages_remaining/usages, 1)
+                    const {item: {default_usages}, usages_remaining} = updatedData
+                    const percentage = Math.min(usages_remaining/default_usages, 1)
                     const firstHalf = Math.min(percentage, 0.5) * 2
                     const secondHalf = Math.max(percentage - 0.5, 0) * 2
                     let colorClass = 'green'
