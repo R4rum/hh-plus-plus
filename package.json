@@ -1,6 +1,6 @@
 {
   "name": "hh-plus-plus",
-  "version": "1.24.3.2",
+  "version": "1.25.1.1",
   "description": "Adding things here and there in the Hentai Heroes game. Also supports HHCore-based games such as GH and CxH.",
   "private": "true",
   "scripts": {
@@ -25,7 +25,11 @@
   },
   "homepage": "https://github.com/R4rum/hh-plus-plus#readme",
   "devDependencies": {
+    "css-loader": "^6.5.1",
     "eslint": "^7.32.0",
+    "sass": "^1.45.0",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.53.0",
