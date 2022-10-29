@@ -128,6 +128,7 @@ export const stConfig = {
     bbProgress: 'Better Boss Bang rewards progress bar',
     compactLossScreen: 'Compact loss screen',
     seasonalEventTweaks: 'Seasonal Event tweaks',
+    compactHaremFilters: 'Compact Harem filters',
 }
 
 export const villain = {
