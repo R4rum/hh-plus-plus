@@ -9,7 +9,7 @@ b) Click the script URL: https://raw.githubusercontent.com/R4rum/hh-plus-plus/ma
 c) Your user script manager of choice should automatically prompt you to install/update the script. If it doesn't, well, figure it out.
 
 # What this changes
-* The market equips filter module has greatly improved speed, at the cost of usability
+* The market equips filter module has greatly improved speed... with potential negative consequences
 * A refresh button for contest leaderboards
 * The legacy home screen layout has been modified to make room for a larger girl image
 * A different temporary PoP order

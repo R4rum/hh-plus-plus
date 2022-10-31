@@ -140,7 +140,7 @@ class EquipManager {
             })
             delete this.elementCache[key]
 
-            this.reconsileAfterNextDOMChange()
+            //this.reconsileAfterNextDOMChange()
         })
         Helpers.onAjaxResponse(/action=market_buy/, (response, opt) => {
             const searchParams = new URLSearchParams(opt.data)
