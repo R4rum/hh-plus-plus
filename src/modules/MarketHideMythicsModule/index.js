@@ -27,8 +27,8 @@ class MarketHideMythicsModule extends CoreModule {
 
         Helpers.defer(() => {
             const destroy = () => {
-                $('#shops_left>#shop>.gift>.mythic.slot').replaceWith(`<div class="slot empty"></div>`) 
-                $('#shops_left>#shop>.potion>.mythic.slot').replaceWith(`<div class="slot empty"></div>`) 
+                $('.merchant-inventory-container').find('.slot.mythic[type="gift"]').replaceWith(`<div class="slot empty"></div>`) 
+                $('.merchant-inventory-container').find('.slot.mythic[type="potion"]').replaceWith(`<div class="slot empty"></div>`) 
             }
             destroy()
             new MutationObserver(destroy).observe(document.getElementById('shops'), {attributes: true, attributeFilter:['class'], subtree: true})
