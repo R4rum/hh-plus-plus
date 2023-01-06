@@ -118,7 +118,7 @@ class FightAVillainModule extends CoreModule {
             const $villainDrops = $('<div class="menu-villain-drops"></div>')
             if (gems) {
                 gems.forEach(({element, amount}) => {
-                    $villainDrops.append(`<div class="menu-villain-gem-drop-container" generic-tooltip="${GT.design[`${element}_gem`]}"><img class="menu-villain-drop" src="${Helpers.getCDNHost()}/pictures/design/gems/${element}.png" /><span class="menu-villain-gem-drop-amount">${amount}</span></div>`)
+                    $villainDrops.append(`<div class="menu-villain-gem-drop-container" tooltip="${GT.design[`${element}_gem`]}"><img class="menu-villain-drop" src="${Helpers.getCDNHost()}/pictures/design/gems/${element}.png" /><span class="menu-villain-gem-drop-amount">${amount}</span></div>`)
                 })
             }
             if (items) {
@@ -155,7 +155,7 @@ class FightAVillainModule extends CoreModule {
                     const showShards = shards === '?' || shards < 100
 
                     allGirlsObtained &= !showShards
-                    $villainTierGirls.append(`<div class="girl_ico ${showShards ? '' : 'obtained'}" rarity="${rarity}"><img src="${girlIcon}"/>${showShards ? `<div class="shard-count" shards="${shards}" name="${name}"><span class="shard"></span>${shards}</div>` : '' }</div>`)
+                    $villainTierGirls.append(`<div class="girl_ico ${showShards ? '' : 'obtained'}" rarity="${rarity}"><img src="${girlIcon}"/>${showShards ? `<div class="shard-count" shards="${shards}" name="${name}" shards-tooltip><span class="shard"></span>${shards}</div>` : '' }</div>`)
                 })
                 $villainTier.append($villainTierTitle).append($villainTierGirls)
                 $villainBottomRow.append($villainTier)
@@ -179,7 +179,7 @@ class FightAVillainModule extends CoreModule {
                     const girlIcon = `${Helpers.getCDNHost()}/pictures/girls/${girlId}/ico0-300x.webp`
 
                     const showShards = shards === '?' || shards < 100
-                    $villainTierGirls.append(`<div class="girl_ico ${showShards ? '' : 'obtained'}" rarity="${rarity}"><img src="${girlIcon}"/>${showShards ? `<div class="shard-count" shards="${shards}" name="${name}"><span class="shard"></span>${shards}</div>` : '' }</div>`)
+                    $villainTierGirls.append(`<div class="girl_ico ${showShards ? '' : 'obtained'}" rarity="${rarity}"><img src="${girlIcon}"/>${showShards ? `<div class="shard-count" shards="${shards}" name="${name}" shards-tooltip><span class="shard"></span>${shards}</div>` : '' }</div>`)
                 })
                 $villainTier.append($villainTierTitle).append($villainTierGirls)
                 $villainBottomRow.append($villainTier)
