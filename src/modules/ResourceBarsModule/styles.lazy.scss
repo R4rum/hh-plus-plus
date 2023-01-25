@@ -28,7 +28,7 @@ body > div > header {
         div[rel="level"] {
             position: absolute;
             top: 8px;
-            left: 111px;
+            left: 91px;
             width: 36px;
             z-index: 150;
             text-align: center;
@@ -284,6 +284,15 @@ body > div > header {
         margin-left: 20px;
         margin-top: 4px;
     }
+
+    #show-hero-resources {
+        margin-top: 4px;
+        margin-left: 15px;
+
+        & + #blessings-button {
+            margin-left: 5px;
+        }
+    }
 }
 
 body > div > header > div.energy_counter {
@@ -482,11 +491,6 @@ body#hh_comix > div > header div[rel="xp"] {
     .item-price {
         display: none;
     }
-}
-
-#contests > div > div.right_part img {
-    height: 286px;
-    margin-top: -74px;
 }
 
 @media #{$mediaMobile} {

@@ -65,6 +65,8 @@ export const config = {
     eventEndIndicators: 'Anzeige für Eventende auf dem Startbildschirm',
     haremTeamsFilter: 'Teamfilter für Harem',
     upgradeQuickNav: 'Schnellnavigation auf der Upgrade-Seite',
+    leaderboardClubmateIndicators: 'Club-Mitglieder auf Ranglisten hervorheben',
+    leaderboardProfilePopups: 'Links zu Spielerprofilen in den Ranglisten',
 }
 export const stConfig = {
     missionsBackground: 'Missionshintergrund ändern',
@@ -289,4 +291,8 @@ export const blessingSpreadsheetLink = {
 export const haremTeamsFilter = {
     team: 'Team',
     visitTeams: 'Besuche zuerst die <a href="../teams.html">Teams</a>.',
+}
+
+export const leaderboardClubmateIndicators = {
+    clubmate: 'Club-Mitglieder',
 }

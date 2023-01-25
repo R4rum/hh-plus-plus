@@ -1,3 +1,12 @@
+1.30.2: Fixing resource bars after 25/01 update
+1.30.1: Fixing bug where flairs would disappear when sorting the league table, pre-empting addition of resource summary button in resource bars module (fix for position of level indicator will have to happen after it goes live)
+1.30.0: Adding module to link to player profiles from leaderboards
+1.29.0: Adding modules to show clubmates and script Patreon supporters on leaderboards (league, contests, season, pantheon, pov, pog)
+1.28.24: Annotating Season, Pantheon and Po* leaderboards with player IDs (enabler for future modules)
+1.28.23: Enabling pantheon script features on CxH
+1.28.22: Fixing some missing icons, fixing pantheon leaderboard now that it's the same as Po*, improving simulator logging, fixing monthly card text tweak for the new icons
+1.28.21: Improving performance on the mythic equip upgrade page more
+1.28.20: Improving performance on the mythic equip upgrade page
 1.28.19: Fixing more missing tooltips
 1.28.18: Fixing missing tooltips
 1.28.17: Pre-empting new tooltips update

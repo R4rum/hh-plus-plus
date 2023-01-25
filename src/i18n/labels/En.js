@@ -86,6 +86,8 @@ export const config = {
     eventEndIndicators: 'Event ending indicators on home screen',
     haremTeamsFilter: 'Harem teams filter',
     upgradeQuickNav: 'Upgrade page quick navigation',
+    leaderboardClubmateIndicators: 'Highlight clubmates on leaderboards',
+    leaderboardProfilePopups: 'Links to player profiles from leaderboards',
 }
 export const stConfig = {
     missionsBackground: 'Change missions background',
@@ -233,8 +235,6 @@ export const harem = {
     marketRestocked: '> The <a href="../shop.html">Market</a> restocked since your last visit.',
     visitMarket: '> Visit the <a href="../shop.html">Market</a> first to see an inventory summary here',
     itemSummary: '{{count}} ({{value}} {{type}})',
-    costSC: '{{cost}} <span cur="soft_currency"></span>',
-    costHC: '{{cost}} <span cur="hard_currency"></span>',
     haremStats: 'Harem Stats',
     upgrades: 'Upgrades',
     levelsAwakening: 'Levels & Awakening',
@@ -364,4 +364,8 @@ export const blessingSpreadsheetLink = {
 export const haremTeamsFilter = {
     team: 'Team',
     visitTeams: 'Visit <a href="../teams.html">Teams</a> first.',
+}
+
+export const leaderboardClubmateIndicators = {
+    clubmate: 'Clubmate',
 }

@@ -13,8 +13,10 @@ import {
     TimerCollector
 } from './collectors'
 import Helpers from './common/Helpers'
+import TableAnnotation from './common/TableAnnotation'
 import Config from './config'
 import * as modules from './modules'
+import LeaderboardSupportersIndicatorsModule from './modules/LeaderboardSupportersIndicatorsModule'
 
 const runScript = () => {
     const config = new Config()
@@ -32,6 +34,10 @@ const runScript = () => {
     SidequestStatusCollector.collect()
     PathEventCollector.collect()
     HaremFilterCollector.collect()
+
+    TableAnnotation.run()
+
+    new LeaderboardSupportersIndicatorsModule().run()
 
     // configurable modules
 
