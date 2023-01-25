@@ -78,3 +78,4 @@ export {default as CompactLossScreenStyleTweak} from './CompactLossScreenStyleTw
 export {default as SeasonalEventStyleTweak} from './SeasonalEventStyleTweak'
 export {default as CompactHaremFiltersStyleTweak} from './CompactHaremFiltersStyleTweak'
 export {default as ExpandedMarketInventoryStyleTweak} from './ExpandedMarketInventoryStyleTweak'
+export {default as CompactResourceSummaryStyleTweak} from './CompactResourceSummaryStyleTweak'
