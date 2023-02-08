@@ -121,6 +121,8 @@ export const stConfig = {
     seasonalEventTweaks: 'Поправки для Сезонных Событий',
     compactHaremFilters: 'Компактные фильтры Гарема',
     expandedMarketInventory: 'Расширенный список предметов Рынка',
+    compactResourceSummary: 'Компактный перечень ресурсов',
+    hideClaimAllButton: 'Скрыть кнопку "Получить Все" на экране наград Сезона',
 }
 
 export const villain = {
